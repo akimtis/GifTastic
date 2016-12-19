@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GifTastic</title>
+  <title>Patterns</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
 
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-  <h1> Gif Flower Garden </h1>
-  <div class=container>
-    <div id=buttons>
-     
+  <h1> Patterns </h1>
+  <div class="container-fluid">
+    <div id="buttons">
     </div>
-    <div class=results>
+  </div>
+
+  <div class="container-fluid">
+    <div class="col-md-8">
+    <div id="gifArea"></div>
     </div>
+
+    <form>
+      <div class="form-group row">
+      <div class="col-xs-10">
+        <label for="example-text-input" class="col-form-label">Add a Category</label>
+        <input class="form-control" type="text" value="" id="example-text-input">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
 <script src="https://code.jquery.com/jquery.js"></script>
 
 <script src="app.js"></script>

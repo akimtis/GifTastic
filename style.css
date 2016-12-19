@@ -1,0 +1,15 @@
+button{
+  margin: 10px;
+  float: left;
+}
+
+form {
+  float: left;
+  margin-left: 20px;
+  border: solid black 2px;
+}
+
+#gifArea {
+  float: left;
+  border: solid black 2px;
+}
