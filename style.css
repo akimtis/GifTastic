@@ -13,3 +13,9 @@ form {
   float: left;
   border: solid black 2px;
 }
+
+img{
+
+  margin: 20px;
+  height: 150px;
+}
