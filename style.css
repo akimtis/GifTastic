@@ -30,9 +30,12 @@ form {
 }
 
 #gifTag{
-  margin: 0;
-  padding-right: 20px;
+  width: 80px;
+  height: 30px;
+  margin: 20px;
+  padding: 5px ;
   position: relative;
+  border: solid red 2px;
 }
 
 .rate{

@@ -9,16 +9,16 @@ for (var i= 0; i< topics.length; i++) {
   $("#buttons").append(buttonHTML);
 }
 
+//Below, I'm attmepting to append the value of the form input as a new button
 $('#submitBtn').on('click', function (){
 
-
-  // var newTopic= $("#example-text-input")
-  // topics.append(newTopic)
+  var newTopic= $("#example-text-input".value)
+  topics.append(newTopic)
   // console.log(topics.join)
     // topics.push(document.getElementById("input").value);
     //  x.innerHTML = topics.join('<br/>'); 
   // topics.unshift(input.val);
-
+  return false;
 })
 
 
@@ -44,7 +44,7 @@ $(".buttonSearch").on("click", function(){
           class: "gif"
         }).prependTo('#gifArea');
 
-        $('#gifArea').prepend('<p >Rating: ' + response.data[j].rating + '</p>');
+        $('#gifArea').prepend('<p id="gifTag">Rating: ' + response.data[j].rating + '</p>');
 
         // $('#gifArea').prepend('<img src=' +'"'+ response.data[j].images.downsized.url +'"'+'>')
       }
@@ -52,7 +52,7 @@ $(".buttonSearch").on("click", function(){
 
 });
 
-
+// I feel like this should work, and I have no idea why it doesn't
 $('.gif').on("click", function() {
   var state = $(this).attr("data-state");
 
