@@ -1,21 +1,47 @@
+h1{
+  padding-left: 30px;
+}
+
 button{
   margin: 10px;
   float: left;
 }
 
+.container-fluid{
+  float-left;
+}
+
 form {
   float: left;
-  margin-left: 20px;
   border: solid black 2px;
+  position: relative;
 }
 
 #gifArea {
   float: left;
   border: solid black 2px;
+  width: 70%;
+  margin: 0px;
+}
+
+.gif{
+  float:left;
+  padding-right: 20px;
+}
+
+#gifTag{
+  margin: 0;
+  padding-right: 20px;
+  position: relative;
+}
+
+.rate{
+  float:left;
 }
 
 img{
-
   margin: 20px;
   height: 150px;
+  padding-right: 20px;
+  float: left;
 }

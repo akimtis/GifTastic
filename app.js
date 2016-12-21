@@ -1,13 +1,26 @@
 
 
 
-var topics = ["squares", "swirls", "mandelbrot", "circles", "angles"]
+var topics = ["squares", "parallel lines", "mandelbrot", "circles", ]
+console.log(topics);
 
 for (var i= 0; i< topics.length; i++) {
   var buttonHTML = '<button type="button" class="btn btn-primary buttonSearch" data-search=' + '"' + topics[i] + '" >'+  topics[i] +'</button>';
   $("#buttons").append(buttonHTML);
 }
-    
+
+$('#submitBtn').on('click', function (){
+
+
+  // var newTopic= $("#example-text-input")
+  // topics.append(newTopic)
+  // console.log(topics.join)
+    // topics.push(document.getElementById("input").value);
+    //  x.innerHTML = topics.join('<br/>'); 
+  // topics.unshift(input.val);
+
+})
+
 
 $(".buttonSearch").on("click", function(){
   var x = $(this).data("search")
@@ -22,15 +35,16 @@ $(".buttonSearch").on("click", function(){
       console.log(response.data);
       console.log(response.data[0]);
       for (var j=0; j<response.data.length; j++){
-        $('#gifArea').prepend('<p>Rating: ' + response.data[j].rating + '</p>');
 
         $('<img >', {
           'src': response.data[j].images.fixed_height_still.url,
-          'data-active': response.data[j].images.fixed_height.url,
-          'data-state': "still",
           'data-still': response.data[j].images.fixed_height_still.url,
-          class: "addImg"
+          'data-animate': response.data[j].images.fixed_height.url,
+          'data-state': "still",
+          class: "gif"
         }).prependTo('#gifArea');
+
+        $('#gifArea').prepend('<p >Rating: ' + response.data[j].rating + '</p>');
 
         // $('#gifArea').prepend('<img src=' +'"'+ response.data[j].images.downsized.url +'"'+'>')
       }
@@ -38,7 +52,8 @@ $(".buttonSearch").on("click", function(){
 
 });
 
-$('#addImg').on('click', function() {
+
+$('.gif').on("click", function() {
   var state = $(this).attr("data-state");
 
   if (state === "still"){
@@ -50,8 +65,4 @@ $('#addImg').on('click', function() {
   }
 });
 
-$('#submitBtn').on('click', function(){
-
-
-})
 
